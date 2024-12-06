@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de petshop</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@700&family=Inter+Tight:wght@700&family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div id="logo">
+        <i><img src="src/assets/dog.svg"></i>
+        <h2>Mundo Pet</h2>
+   </div>
+
+   <div id="intro">
+        <div>
+            <h1>Sua agenda</h1>
+            <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+        </div>
+        <div class="select-calendar">
+            <i><img src="src/assets/calendar.svg"/></i>
+            <input type="date" id="date" name="date"/>
+        </div>
+   </div>
+
+   <div id="agenda">
+    
+    <section id="morning">
+        <div class="section-title">
+            <i><img src="src/assets/morning.svg" alt=""></i>
+            <h3>Manhã</h3>
+            <h3 class="time-range">09h-12h</h3>
+        </div>
+        <div class="line"></div>
+        <div class="section-list">
+            <ul id="morning-list" class="period">
+                <!--
+                <li>
+                    <div class="line2"></div>
+                    <div class="col-3">
+                        <div class="time-scheduled">
+                            <p>09:00</p>
+                            <p>Thor <span>/ Fernanda Costa</span></p>
+                        </div>
+                        <div class="to-do">
+                            <p>Vacinação</p>
+                        </div>
+                        <div class="remove">
+                            <p>Remover agendamento</p>
+                        </div>
+                    </div>
+                </li>
+                -->
+            </ul>
+        </div>
+    </section>
+
+    <section id="afternoon">
+        <div class="section-title">
+            <i><img src="src/assets/afternoon.svg"></i>
+            <h3>Tarde</h3>
+            <h3 class="time-range">13h-18h</h3>
+        </div>
+        <div class="line"></div>
+        <div class="section-list">
+            <ul id="afternoon-list" class="period">
+                <!--
+                <li>
+                    <div class="line2"></div>
+                    <div class="col-3">
+                        <div class="time-scheduled">
+                            <p>13:00</p>
+                            <p>Mel <span>/ João Souza</span></p>
+                        </div>
+                        <div class="to-do">
+                            <p>Corte de unhas</p>
+                        </div>
+                        <div class="remove">
+                            <p>Remover agendamento</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="line2"></div>
+                    <div class="col-3">
+                        <div class="time-scheduled">
+                            <p>14:00</p>
+                            <p>Bella <span>/ Pedro Martins</span></p>
+                        </div>
+                        <div class="to-do">
+                            <p>Aplicação de Anti-pulgas</p>
+                        </div>
+                        <div class="remove">
+                            <p>Remover agendamento</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="line2"></div>
+                    <div class="col-3">
+                        <div class="time-scheduled">
+                            <p>15:00</p>
+                            <p>Simba <span>/ Juliana Rocha</span></p>
+                        </div>
+                        <div class="to-do">
+                            <p>Tosa Higiênica</p>
+                        </div>
+                        <div class="remove">
+                            <p>Remover agendamento</p>
+                        </div>
+                    </div>
+                </li>
+                -->
+            </ul>
+        </div>
+    </section>
+
+    <section id="night">
+        <div class="section-title">
+            <i><img src="src/assets/night.svg"></i>
+            <h3>Noite</h3>
+            <h3 class="time-range">19h-21h</h3>
+        </div>
+        <div class="line"></div>
+        <div class="section-list">
+            <ul id="night-list" class="period">
+                <!--
+                <li>
+                    <div class="line2"></div>
+                    <div class="col-3">
+                        <div class="time-scheduled">
+                            <p>20:00</p>
+                            <p>Max <span>/ Camila Santos</span></p>
+                        </div>
+                        <div class="to-do">
+                            <p>Limpeza de Dentes</p>
+                        </div>
+                        <div class="remove">
+                            <p>Remover agendamento</p>
+                        </div>
+                    </div>
+                </li>
+                -->
+            </ul>
+        </div>
+    </section>
+   </div>
+
+   <div class="container">
+        <div class="content"></div>
+        <div id="button-area">
+            <button class="showForm">Novo Agendamento</button>
+        </div>
+        <button class="desktop-only showForm">Novo Agendamento</button>
+   </div>
+   
+
+   <form>
+        <i><img src="src/assets/x.svg" id="close"></i>
+        <h1>Agende um atendimento</h1>
+        <p>Preencha os dados do cliente para realizar o agendamento:</p>
+        <div class="field">
+            <label for="owner-name">Nome do tutor</label>
+            <div class="input">
+                <i><img src="src/assets/user.svg"></i>
+                <input type="text" id="owner-name" name="owner-name" placeholder="Helena Souza">
+            </div>
+        </div>
+        <div class="field">
+            <label for="pet-name">Nome do pet</label>
+            <div class="input">
+                <i><img src="src/assets/pet.svg"></i>
+                <input type="text" id="pet-name" name="pet-name" placeholder="Cheddar">
+            </div>
+        </div>
+        <div class="field">
+            <label for="phone">Telefone</label>
+            <div class="input">
+                <i><img src="src/assets/phone.svg"></i>
+                <input type="text" id="phone" name="phone" placeholder="(00) 0 0000-0000">
+            </div>
+        </div>
+        <div class="field">
+            <label for="description">Descrição do serviço</label>
+            <textarea name="description" id="description" placeholder="Banho e tosa"></textarea>
+        </div>
+        <div class="choose">
+            <div class="field">
+                <label for="date">Data</label>
+                <div class="choose-date">
+                    <i><img src="src/assets/calendar.svg"></i>
+                    <input type="date" id="date-scheduled" name="date">
+                </div>
+            </div>
+            <div class="field">
+                <label for="hour">Hora</label>
+                <div class="choose-date">
+                    <i><img src="src/assets/clock.svg"></i>
+                    <input type="time" id="hour-scheduled" name="hour">
+                </div>
+            </div>
+        </div>
+
+        <button>Agendar</button>
+   </form>
+</body>
+</html>

@@ -1,0 +1,137 @@
+#intro, #agenda, #button-area {
+    filter: none;
+}
+
+form {
+    display: none;
+    background-color: var(--bg-tertiary);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: var(--content-primary);
+    padding-inline: 1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-radius: .75rem;
+    width: 100%;
+    max-width: 30rem;
+    transform: translate(-50%, -64%);
+    margin-top: 8rem;
+
+    #close {
+        position: absolute;
+        right: 1.25rem;
+        cursor: pointer;
+    }
+
+    #close:hover {
+        transform: scale(1.2);
+    }
+
+    h1 {
+        font: var(--title);
+        margin-top: .75rem;
+    }
+
+    p {
+        font: var(--p-md);
+        color: var(--content-secondary);
+        margin-bottom: 1.75rem;
+    }
+
+    button {
+        box-shadow: none;
+        display: flex;
+        margin-left: auto;
+        margin-bottom: 1.5rem;
+    }
+
+}
+
+.field {
+    label {
+        font: var(--label-md);
+    }
+
+    .input {
+        border: 1px solid var(--border-primary);
+        padding: .75rem;
+        display: flex;
+        gap: .75rem;
+        border-radius: .5rem;
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+        
+        img {
+            position: initial;
+        }
+    
+        input {
+            font: 400 1rem/1.5 var(--ff);
+            background-color: transparent;
+            border: none;
+            color: var(--content-primary);
+        }
+    }
+
+    .input:hover, textarea:hover, .choose-date:hover {
+        border: 1.5px solid var(--border-secondary);
+    }
+
+    input:focus, textarea:focus{
+        outline: none;
+    }
+
+    textarea {
+        border: 1px solid var(--border-primary);
+        padding: .75rem;
+        font: 400 1rem/1.5 var(--ff);
+        background-color: transparent;
+        border-radius: .5rem;
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        color: var(--content-primary);
+    }
+
+    .choose-date {
+        border: solid 1.8px var(--border-primary);
+        padding: .75rem;
+        margin-top: .75rem;
+        border-radius: .5rem;
+        display: flex;
+        align-content: center;
+        margin-bottom: 1.75rem;
+
+        input {
+            background-color: transparent;
+            border: none;
+            color: var(--content-secondary);
+            margin-left: .5rem;
+            font: 300 1rem/1.5 var(--ff);
+            width: 100%;
+        }
+
+        ::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+            background: url("../assets/arrow-down.svg") no-repeat center right;
+        }
+    }
+}
+
+@media (width >= 80em) {
+    form {
+        margin-top: 8rem;
+    }   
+
+    .choose {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+
+        .field {
+            width: 100%;
+        }
+    }
+}
+

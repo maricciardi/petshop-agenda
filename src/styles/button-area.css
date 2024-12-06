@@ -1,0 +1,50 @@
+button {
+    background-color: var(--content-brand);
+    font: var(--label-lg);
+    text-transform: uppercase;
+    padding: .75rem 1.5rem;
+    height: 3rem;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 0 20px var(--content-brand);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--bg-highlights);
+    transform: scale(1.02);
+}
+
+.container {
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: auto;
+}
+
+#button-area {
+    background-color: var(--bg-tertiary);
+    margin-inline: -1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5.25rem;
+    margin-bottom: 0rem;
+}
+
+button.desktop-only {
+    position: absolute;
+    right: -18rem;
+    bottom: 2rem;
+}
+
+
+
+@media (width >= 80em) {
+    #button-area {
+        display: none;
+    }
+}

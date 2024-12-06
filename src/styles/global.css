@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --title: 700 1.5rem/2 "Inter Tight", sans-serif;
+
+  --ff: "Inter", sans-serif;
+  --p-md: 500 .875rem/1.5 var(--ff);
+  --p-sm: 400 .75rem/1 var(--ff);
+  --label-lg: 700 1rem/1.5 var(--ff);
+  --label-md: 700 .875rem/1.5 var(--ff);
+  --label-sm: 700 .75rem/1 var(--ff);
+  --link: 500 .75rem/1 var(--ff);
+
+  --content-primary: #ffffff;
+  --content-secondary: #98959d;
+  --content-tertiary: #666666;
+  --content-brand: #9282fa;
+
+  --bg-primary: #151515;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #23242c;
+  --bg-brand: #9282fa;
+  --bg-highlights: #bdb4fa;
+
+  --border-primary: #3e3c41;
+  --border-secondary: #86818c;
+  --border-brand: #9282fa;
+  --border-divisor: #353339;
+
+  --blue: #027df0;
+  --blue-light: #16487a;
+  --yellow: #f0dc02;
+  --yellow-light: #756e1b;
+  --orange: #f09102;
+  --orange-light: #75501b;
+}
+
+body {
+  background-color: var(--bg-primary);
+  position: relative;
+  margin-inline: 1.25rem;
+  
+  height: 100%;
+}
+
+#logo {
+  background-color: #2E2C30;
+  color: var(--content-brand);
+  display: flex;
+  gap: 4px;
+  padding: .75rem 1.25rem;
+  max-width: 9.6rem;
+  border-radius: 0 0 12px 0;
+  margin-left: -1.25rem;
+
+  h2 {
+      text-transform: uppercase;
+      font-family: "Familjen Grotesk", sans-serif;
+      font-size: 1rem;
+  }
+}
+
+.desktop-only {
+  display: none;
+}
+
+
+@media (width >= 80em) {
+  body {
+    margin-inline: 20rem;
+  }
+
+  #logo {
+    margin-left: -20rem;
+  }
+
+  .desktop-only {
+    display: flex;
+  }
+}

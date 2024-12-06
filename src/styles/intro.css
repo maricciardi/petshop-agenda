@@ -1,0 +1,59 @@
+#intro {
+    color: var(--content-primary);
+
+    h1 {
+        font: var(--title);
+        margin-top: 1rem;
+    }
+
+    p {
+        font: var(--p-md);
+        color: var(--content-secondary);
+    }
+
+    .select-calendar {
+        border: solid 1.8px var(--border-primary);
+        display: inline-block;
+        padding: .75rem;
+        margin-top: .75rem;
+        border-radius: .5rem;
+        position: relative;
+
+        img {
+            top: .875rem;
+            position: absolute;
+        }
+
+        input {
+            background-color: transparent;
+            border: none;
+            color: var(--content-secondary);
+            margin-left: 1.75rem;
+            font: 300 1rem/1.5 var(--ff);
+        }
+    }
+
+    ::-webkit-calendar-picker-indicator {
+        cursor: pointer;
+        background: url("../assets/arrow-down.svg") no-repeat center;
+    }
+}
+
+@media (width >= 80em) {
+    #intro {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+
+        h1 {
+            margin-top: 0;
+            font: 700 1.5rem/1.5 "Inter Tight", sans-serif;;
+        }
+
+        .select-calendar {
+            height: 3rem;
+            margin-top: 0rem;
+        }
+    }
+}

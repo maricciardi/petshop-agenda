@@ -1,0 +1,112 @@
+section {
+    background-color: var(--bg-tertiary);
+    margin-top: 2rem;
+    border-radius: 10px;
+
+    .line {
+        background-color: var(--border-primary);
+        height: 1px;
+        width: 100%;
+    }
+}
+
+.section-title {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    padding: .75rem 1.25rem;
+    gap: .75rem;
+
+    h3 {
+        font: var(--label-lg);
+        color: var(--content-primary);
+    }
+
+    h3.time-range {
+        color: var(--content-secondary);
+    }
+}
+
+.section-list {
+    padding: 2rem;
+
+    ul {
+        list-style-type: none;
+
+        li:first-child .line2:first-of-type {
+            display: none;
+        }
+
+        li {
+            .line2 {
+                background-color: var(--border-primary);
+                height: 1px;
+                width: 100%;
+                margin-top: .75rem;
+                margin-bottom: 1.75rem;
+            }
+
+            .time-scheduled {
+                display: flex;
+                gap: .75rem;
+                font: var(--label-md);
+                color: var(--content-primary);
+
+                span {
+                    font: var(--p-md);
+                    color: var(--content-secondary);
+                }
+            }
+
+            .to-do {
+                font: var(--p-md);
+                color: var(--content-secondary);
+            }
+
+            .remove {
+                color: var(--content-tertiary);
+                display: flex;
+                justify-content: flex-end;
+                cursor: pointer;
+            }
+
+            .remove:hover {
+                color: var(--content-primary);
+                text-decoration: underline;
+            }
+            
+        }
+    }
+}
+
+#night {
+    margin-bottom: 3.5rem;
+}
+
+@media (width < 80em) {
+    .to-do {
+        margin-top: 3px;
+    }
+
+    .remove {
+        margin-top: 1rem;
+        font: var(--p-sm);
+    }
+}
+
+
+@media (width >= 80em) {
+    .col-3 {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 18rem 1fr 1fr;
+    }
+
+    .to-do {
+        margin-top: 0;
+    }
+
+    .remove {
+        margin-top: 0;
+        font: 400 .875rem/1.5 var(--ff);
+    }
+}
